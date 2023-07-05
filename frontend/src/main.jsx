@@ -12,7 +12,6 @@ import Resource from './pages/Resource.jsx';
 import Financial from './pages/Financial.jsx';
 import Recipe from './pages/Recipe.jsx';
 import Daily from './pages/Daily.jsx';
-import TimeForm from './components/TimeForm.jsx';
 
 
 
@@ -50,7 +49,7 @@ const router = createBrowserRouter([
         element: <Financial/>,
       },
       {
-        path: "recipe/",
+        path: "health/",
         element: <Recipe/>,
       },
       {
