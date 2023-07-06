@@ -1,0 +1,28 @@
+version: '3'
+services:
+    database:
+        image: mysql:latest
+        expose:
+            - 3306
+        networks:
+            - improved_life
+        environment:
+            - MYSQL_ROOT_PASSWORD=Ayush@007
+            - MYSQL_DATABASE=life_hack
+        volumes:
+            - db:/var/lib/mysql
+    
+    backend:
+        image: ./backend
+        expose:
+            - 3000
+        networks:
+            - improved_life
+
+    frontend:
+        image: ./frontend
+        ports:
+            - 80:80
+        networks:
+            - improved_life
+        
