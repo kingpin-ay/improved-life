@@ -3,13 +3,16 @@ import Navbar from './components/Navbar'
 import { Outlet } from 'react-router-dom'
 
 
-function App() {
 
+
+function App() {
+  const auth = {"token" : false}
 
   return (
     <>
       <Navbar />
-      <Outlet />
+      {/* {auth.token? (<Outlet/>) : (<Navigate to="/login"/>)} */}
+        <Outlet/>
     </>
   )
 }
