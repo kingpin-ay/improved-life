@@ -23,7 +23,6 @@ export class UsersController {
         return await this.usersService.userCreation({ password: hashPass , username: username })
     }
 
-
     @Post('auth')
     async authenticate(@Body() userDetails:CreateUserDto , @Res({passthrough:true}) response : Response): Promise<any> {
         const user = await this.usersService.locateUser({ username : userDetails.username })

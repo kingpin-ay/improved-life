@@ -26,13 +26,13 @@ const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<App />} errorElement={<ErrorPage />}>
     <Route index element={<Home />} />
     <Route path="login" element={<Login />} />
-    <Route path="signup/" element={<Signup />} />
+    <Route path="signup" element={<Signup />} />
     <Route element={<RequireAuth/>} >
-      <Route path="time/" element={<Time />} />
-      <Route path="resource/" element={<Resource />} />
-      <Route path="financial/" element={<Financial />} />
-      <Route path="health/" element={<Recipe />} />
-      <Route path="quotes/" element={<Daily />} />
+      <Route path="time" element={<Time />} />
+      <Route path="resource" element={<Resource />} />
+      <Route path="financial" element={<Financial />} />
+      <Route path="health" element={<Recipe />} />
+      <Route path="quotes" element={<Daily />} />
     </Route>
   </Route>
 ));
