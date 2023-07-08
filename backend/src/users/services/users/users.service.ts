@@ -18,9 +18,6 @@ export class UsersService {
         return this.userRepository.save(newUser) 
     }
 
-    fetchUser() {
-        return this.userRepository.find();
-    }
 
     async locateUser(condition: any) : Promise<User>{
         return await this.userRepository.findOne({where : condition})

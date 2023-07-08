@@ -34,7 +34,7 @@ const Navbar = () => {
                     <div className="navbar-nav">
                         <Link className="nav-link active" aria-current="page" to="/">HOME</Link>
                         <div className='nav-item dropdown'>
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 NAVIGATE
                             </a>
                             <ul className="dropdown-menu dropdown-menu-right">
