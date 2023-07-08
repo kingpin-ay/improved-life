@@ -1,4 +1,5 @@
-import {Entity, PrimaryGeneratedColumn , Column} from 'typeorm';
+import {Entity, PrimaryGeneratedColumn , Column, OneToMany} from 'typeorm';
+import { TimeManage } from './TimeManage';
 
 
 
@@ -17,6 +18,9 @@ export class User {
 
     @Column({nullable:false})
     createdAt : Date;
+
+    @OneToMany(() => TimeManage , (time_card) => time_card.user)
+    time_cards : TimeManage[]
 }
 
 

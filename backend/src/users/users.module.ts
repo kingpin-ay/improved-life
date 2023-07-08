@@ -4,13 +4,16 @@ import { UsersService } from './services/users/users.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from 'src/typeorm/entities/User';
 import { JwtModule } from '@nestjs/jwt';
+import { TimeController } from './controllers/time/time.controller';
+import { TimeService } from './services/time/time.service';
+import { TimeManage } from 'src/typeorm/entities/TimeManage';
 
 @Module({
-  imports:[TypeOrmModule.forFeature([User]),JwtModule.register({
+  imports:[TypeOrmModule.forFeature([User, TimeManage]),JwtModule.register({
     secret:'AyushSecret',
     signOptions : {expiresIn:'1d'}
   })],
-  controllers: [UsersController],
-  providers: [UsersService]
+  controllers: [UsersController, TimeController],
+  providers: [UsersService, TimeService]
 })
 export class UsersModule {}
