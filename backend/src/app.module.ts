@@ -10,11 +10,11 @@ import { TimeManage } from './typeorm/entities/TimeManage';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'localhost',
+      host: process.env.HOST,
       port: 3306,
-      username: 'root',
-      password: 'Ayush@007',
-      database: 'life_hack',
+      username: process.env.USERNAME,
+      password: process.env.PASSWORD,
+      database: process.env.DATABASE,
       entities: [User,TimeManage],
       synchronize: true,
     })
