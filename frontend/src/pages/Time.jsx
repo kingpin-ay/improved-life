@@ -1,5 +1,5 @@
 
-import TimeForm from '../components/TimeForm'
+import TimeForm from '../components/Timeform'
 import TimeTableCard from '../components/TimeTableCard'
 import useAuth from '../hooks/useAuth'
 import { useQuery, useMutation } from 'react-query'
